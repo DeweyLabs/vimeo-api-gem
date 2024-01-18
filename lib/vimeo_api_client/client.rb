@@ -5,9 +5,7 @@ require 'vimeo_api_client/exceptions'
 
 module Vimeo
   module Client
-
     include HTTParty
-
     BASE_API_URI = 'https://api.vimeo.com'.freeze
 
     ERROR_CODES = {
@@ -23,18 +21,24 @@ module Vimeo
     }.freeze
 
     def request(url, options = {}, method = :get)
-      request_url = if url[0] == '/'
-                      options[:headers].merge!('Authorization' => "Bearer #{Vimeo.token}")
-                      "#{BASE_API_URI}#{url}"
-                    else
-                      url
-                    end
-
+      options[:headers] ||= {}
+      unless options[:headers].has_key?('Authorization')
+        options[:headers]['Authorization'] = "Bearer #{Vimeo.token}"
+      end
+    
+      request_url = url.start_with?('/') ? "#{BASE_API_URI}#{url}" : url
+    
       response = HTTParty.send(method, request_url, options)
+
       if response.success? || response.code.to_i == 308
         parse_success response
       else
-        parse_failed response
+        if rate_limited?(response)
+          wait_for_rate_limit_reset(response)
+          request(url, options, method)
+        else
+          parse_failed response
+        end
       end
     end
 
@@ -59,6 +63,16 @@ module Vimeo
     end
 
     private
+
+    def rate_limited?(response)
+      response.code == 429
+    end
+
+    def wait_for_rate_limit_reset(response)
+      reset_time = response.headers['X-RateLimit-Reset']
+      sleep_until = Time.httpdate(reset_time) - Time.now
+      sleep(sleep_until) if sleep_until.positive?
+    end
 
     def parse_success(response)
       result = response_exists?(response) ? response.body : '{}'

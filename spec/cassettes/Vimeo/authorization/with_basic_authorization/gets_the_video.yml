@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.vimeo.com/videos/375468729
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 18 Jan 2024 17:37:20 GMT
+      Content-Type:
+      - application/vnd.vimeo.video+json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '48'
+      X-Ratelimit-Reset:
+      - '2024-01-18T17:38:19+00:00'
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Request-Hash:
+      - a042c915
+      X-Bapp-Server:
+      - api-758fc49b98-h9cfq
+      X-Backend-Server:
+      - api-k8s
+      Accept-Ranges:
+      - bytes
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      X-Served-By:
+      - cache-iad-kiad7000156-IAD, cache-lga21941-LGA
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1705599440.946911,VS0,VE336
+      Vary:
+      - x-http-method-override
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=tLW9XxN2FM3.MkiNgsAIz5imgVzwi2IbH.UQcezyQIk-1705599440-1-AVn/i6Z49Wofzp6sHrKwWhe4fjIzGjVzmaP1SOegNquqIXMK3kAKQIJQc5PPGqqANsWzd4Pz3O5bUyx2pibe3mY=;
+        path=/; expires=Thu, 18-Jan-24 18:07:20 GMT; domain=.vimeo.com; HttpOnly;
+        Secure
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 84789af39f830f70-EWR
+    body:
+      encoding: UTF-8
+      string: '{"uri":"/videos/375468729","name":"Rick Roll''d","description":null,"type":"video","link":"https://vimeo.com/375468729","player_embed_url":"https://player.vimeo.com/video/375468729?h=d063a6fe74","duration":212,"width":1280,"language":null,"height":720,"embed":{"html":"<iframe
+        src=\"https://player.vimeo.com/video/375468729?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=285267\"
+        width=\"1280\" height=\"720\" frameborder=\"0\" allow=\"autoplay; fullscreen;
+        picture-in-picture\" title=\"Rick Roll''d\"></iframe>","badges":{"hdr":false,"live":{"streaming":false,"archived":false},"staff_pick":{"normal":false,"best_of_the_month":false,"best_of_the_year":false,"premiere":false},"vod":false,"weekend_challenge":false},"interactive":false},"created_time":"2019-11-25T17:56:45+00:00","modified_time":"2024-01-18T17:07:05+00:00","release_time":"2019-11-25T17:56:45+00:00","content_rating":["safe"],"content_rating_class":"safe","rating_mod_locked":false,"license":null,"privacy":{"view":"anybody","embed":"public","download":false,"add":true,"comments":"anybody"},"pictures":{"uri":"/videos/375468729/pictures/834247532","active":true,"type":"custom","base_link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d","sizes":[{"width":100,"height":75,"link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_100x75?r=pad","link_with_play_button":"https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_100x75&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png"},{"width":200,"height":150,"link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_200x150?r=pad","link_with_play_button":"https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_200x150&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png"},{"width":295,"height":166,"link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_295x166?r=pad","link_with_play_button":"https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_295x166&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png"},{"width":640,"height":360,"link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_640x360?r=pad","link_with_play_button":"https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_640x360&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png"},{"width":960,"height":540,"link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_960x540?r=pad","link_with_play_button":"https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_960x540&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png"},{"width":1280,"height":720,"link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_1280x720?r=pad","link_with_play_button":"https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_1280x720&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png"},{"width":1920,"height":1080,"link":"https://i.vimeocdn.com/video/834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_1920x1080?r=pad","link_with_play_button":"https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F834247532-e21d524058afe2238e888abfd82747ec985e40cfecce18a85004586c8faa9386-d_1920x1080&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png"}],"resource_key":"d73d8b3d5488ebf600ff45ca5dfca940fd53a27f","default_picture":false},"tags":[],"stats":{"plays":null},"categories":[],"uploader":{"pictures":{"uri":"/users/105567171/pictures/35192623","active":true,"type":"custom","base_link":"https://i.vimeocdn.com/portrait/35192623","sizes":[{"width":30,"height":30,"link":"https://i.vimeocdn.com/portrait/35192623_30x30"},{"width":72,"height":72,"link":"https://i.vimeocdn.com/portrait/35192623_72x72"},{"width":75,"height":75,"link":"https://i.vimeocdn.com/portrait/35192623_75x75"},{"width":100,"height":100,"link":"https://i.vimeocdn.com/portrait/35192623_100x100"},{"width":144,"height":144,"link":"https://i.vimeocdn.com/portrait/35192623_144x144"},{"width":216,"height":216,"link":"https://i.vimeocdn.com/portrait/35192623_216x216"},{"width":288,"height":288,"link":"https://i.vimeocdn.com/portrait/35192623_288x288"},{"width":300,"height":300,"link":"https://i.vimeocdn.com/portrait/35192623_300x300"},{"width":360,"height":360,"link":"https://i.vimeocdn.com/portrait/35192623_360x360"}],"resource_key":"6a3d8c14fb523548148293b416c6dfcd469a3c82","default_picture":false}},"metadata":{"connections":{"comments":{"uri":"/videos/375468729/comments","options":["GET"],"total":17},"credits":{"uri":"/videos/375468729/credits","options":["GET","POST"],"total":0},"likes":{"uri":"/videos/375468729/likes","options":["GET"],"total":12},"pictures":{"uri":"/videos/375468729/pictures","options":["GET","POST"],"total":1},"texttracks":{"uri":"/videos/375468729/texttracks","options":["GET","POST"],"total":0},"related":null,"recommendations":{"uri":"/videos/375468729/recommendations","options":["GET"]}},"interactions":{"report":{"uri":"/videos/375468729/report","options":["POST"],"reason":["pornographic","harassment","ripoff","incorrect
+        rating","spam","causes harm","csam"]}},"is_vimeo_create":false,"is_screen_record":false},"user":{"uri":"/users/105567171","name":"Lege","link":"https://vimeo.com/user105567171","capabilities":{"hasLiveSubscription":false,"hasEnterpriseLihp":false,"hasSvvTimecodedComments":false,"hasSimplifiedEnterpriseAccount":false},"location":"","gender":"","bio":null,"short_bio":null,"created_time":"2019-11-25T14:45:49+00:00","pictures":{"uri":"/users/105567171/pictures/35192623","active":true,"type":"custom","base_link":"https://i.vimeocdn.com/portrait/35192623","sizes":[{"width":30,"height":30,"link":"https://i.vimeocdn.com/portrait/35192623_30x30"},{"width":72,"height":72,"link":"https://i.vimeocdn.com/portrait/35192623_72x72"},{"width":75,"height":75,"link":"https://i.vimeocdn.com/portrait/35192623_75x75"},{"width":100,"height":100,"link":"https://i.vimeocdn.com/portrait/35192623_100x100"},{"width":144,"height":144,"link":"https://i.vimeocdn.com/portrait/35192623_144x144"},{"width":216,"height":216,"link":"https://i.vimeocdn.com/portrait/35192623_216x216"},{"width":288,"height":288,"link":"https://i.vimeocdn.com/portrait/35192623_288x288"},{"width":300,"height":300,"link":"https://i.vimeocdn.com/portrait/35192623_300x300"},{"width":360,"height":360,"link":"https://i.vimeocdn.com/portrait/35192623_360x360"}],"resource_key":"6a3d8c14fb523548148293b416c6dfcd469a3c82","default_picture":false},"websites":[],"metadata":{"connections":{"albums":{"uri":"/users/105567171/albums","options":["GET"],"total":0},"appearances":{"uri":"/users/105567171/appearances","options":["GET"],"total":0},"channels":{"uri":"/users/105567171/channels","options":["GET"],"total":0},"feed":{"uri":"/users/105567171/feed","options":["GET"]},"followers":{"uri":"/users/105567171/followers","options":["GET"],"total":0},"following":{"uri":"/users/105567171/following","options":["GET"],"total":0},"groups":{"uri":"/users/105567171/groups","options":["GET"],"total":0},"likes":{"uri":"/users/105567171/likes","options":["GET"],"total":0},"membership":{"uri":"/users/105567171/membership/","options":["PATCH"]},"moderated_channels":{"uri":"/users/105567171/channels?filter=moderated","options":["GET"],"total":0},"portfolios":{"uri":"/users/105567171/portfolios","options":["GET"],"total":0},"videos":{"uri":"/users/105567171/videos","options":["GET"],"total":1},"shared":{"uri":"/users/105567171/shared/videos","options":["GET"],"total":0},"pictures":{"uri":"/users/105567171/pictures","options":["GET","POST"],"total":1},"folders_root":{"uri":"/users/105567171/folders/root","options":["GET"]},"teams":{"uri":"/users/105567171/teams","options":["GET"],"total":1}}},"location_details":{"formatted_address":"","latitude":null,"longitude":null,"city":null,"state":null,"neighborhood":null,"sub_locality":null,"state_iso_code":null,"country":null,"country_iso_code":null},"skills":[],"available_for_hire":false,"can_work_remotely":false,"resource_key":"38495569de7726c3b2c768fd34f4affab78e57f6","account":"basic"},"app":{"name":"Parallel
+        Uploader","uri":"/apps/87099"},"play":{"status":"playable"},"status":"available","resource_key":"c086d087ec57bbe3920ccba48507edb4eb2ec10b","upload":null,"transcode":null,"is_playable":true,"has_audio":true}'
+  recorded_at: Thu, 18 Jan 2024 17:37:20 GMT
+recorded_with: VCR 6.2.0

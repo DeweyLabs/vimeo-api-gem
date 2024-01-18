@@ -11,3 +11,4 @@
 instagram_api-*.gem
 
 docs/
+.env

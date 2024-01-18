@@ -32,6 +32,7 @@ module Vimeo
     def get_parents(uri)
       parents = {}
       (Vimeo::Resource.descendants - [self.class]).each do |klass|
+        next if klass.name.nil?
         resource_id = klass.get_resource_id(uri)
         next if resource_id.nil? || resource_id.empty?
         parents[klass.resource_id] = resource_id

@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.vimeo.com/videos/375468729
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Thu, 18 Jan 2024 17:37:19 GMT
+      Content-Type:
+      - application/vnd.vimeo.error+json
+      Content-Length:
+      - '182'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Www-Authenticate:
+      - Bearer error="invalid_token"
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Request-Hash:
+      - c67c8151
+      X-Vimeo-Error:
+      - 'true'
+      X-Bapp-Server:
+      - api-758fc49b98-nzcfs
+      X-Backend-Server:
+      - api-k8s
+      Accept-Ranges:
+      - bytes
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      X-Served-By:
+      - cache-iad-kjyo7100080-IAD, cache-lga21973-LGA
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1705599440.783279,VS0,VE47
+      Vary:
+      - x-http-method-override
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=Bj1Hk7sN7EuBwnaQ5iluVfrM2BgYXE56wb46DCpAWHs-1705599439-1-AaH2ZNY/KWrEYUbl2PQbN8ZYQkrP3PzmhteFmlnqborLEBWEQO7ADPHTwsNFo7wk4gUITQNI36KORcOPjJv0/cQ=;
+        path=/; expires=Thu, 18-Jan-24 18:07:19 GMT; domain=.vimeo.com; HttpOnly;
+        Secure
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 84789af29b8042f4-EWR
+    body:
+      encoding: UTF-8
+      string: '{"error":"Something strange occurred. Please get in touch with the
+        app''s creator.","link":null,"developer_message":"The app didn''t receive
+        the user''s credentials.","error_code":8003}'
+  recorded_at: Thu, 18 Jan 2024 17:37:19 GMT
+recorded_with: VCR 6.2.0

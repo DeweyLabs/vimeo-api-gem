@@ -102,8 +102,8 @@ PLATFORMS
 DEPENDENCIES
   debug (~> 1.9)
   dotenv (~> 2.8)
-  rake (~> 10.4)
-  rspec (~> 3.12)
+  rake
+  rspec
   standard (~> 1.37)
   vcr (~> 6.2)
   vimeo_api_client!

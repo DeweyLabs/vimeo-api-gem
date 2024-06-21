@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 RSpec.describe Vimeo do
   let(:video_id) { 375468729 }
@@ -8,13 +8,13 @@ RSpec.describe Vimeo do
       it "raises an error", vcr: true do
         expect {
           Vimeo.resource.get("/videos/#{video_id}")
-        }.to raise_error(Vimeo::Unauthorized) 
+        }.to raise_error(Vimeo::Unauthorized)
       end
     end
 
     context "with basic authorization" do
       it "gets the video", vcr: true do
-        basic_auth = { username: ENV["VIMEO_CLIENT_ID"], password: ENV["VIMEO_CLIENT_SECRET"] }
+        basic_auth = {username: ENV["VIMEO_CLIENT_ID"], password: ENV["VIMEO_CLIENT_SECRET"]}
         encoded_credentials = Base64.strict_encode64("#{basic_auth[:username]}:#{basic_auth[:password]}")
         headers = {"Authorization" => "basic #{encoded_credentials}"}
         response = Vimeo.resource.get("/videos/#{video_id}", {}, headers)
@@ -44,9 +44,9 @@ RSpec.describe Vimeo do
         .to_return(
           status: 429,
           headers: {
-            'X-RateLimit-Limit' => '100',
-            'X-RateLimit-Remaining' => '0',
-            'X-RateLimit-Reset' => (Time.now + rate_limit_reset_time).httpdate
+            "X-RateLimit-Limit" => "100",
+            "X-RateLimit-Remaining" => "0",
+            "X-RateLimit-Reset" => (Time.now + rate_limit_reset_time).iso8601
           }
         )
         .then
@@ -56,7 +56,7 @@ RSpec.describe Vimeo do
         )
     end
 
-    it 'sleeps for the right amount of time when rate limited and the next request is successful' do
+    it "sleeps for the right amount of time when rate limited and the next request is successful" do
       start_time = Time.now
 
       client = Vimeo.resource
